@@ -6,7 +6,7 @@ import db from "../database";
 import { linksTable } from "../database/schema";
 import { eq } from 'drizzle-orm';
 
-namespace LinkRepository {
+namespace linkRepository {
     export const create = async (data: Partial<Link>): Promise<Link> =>{
         try{
             if(data.ownerID && data.name && data.url && data.originalURL){
@@ -94,4 +94,4 @@ namespace LinkRepository {
     }
 }
 
-export default LinkRepository;
+export default linkRepository;

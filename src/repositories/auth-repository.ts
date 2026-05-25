@@ -6,7 +6,7 @@ import db from "../database";
 import { authTable } from "../database/schema";
 import { eq } from 'drizzle-orm';
 
-namespace AuthRepository{
+namespace authRepository{
     export const create = async (data: Partial<Auth>): Promise<Auth> => {
         try{
             if(data.userID && data.password){
@@ -79,4 +79,4 @@ namespace AuthRepository{
     }
 }
 
-export default AuthRepository
+export default authRepository

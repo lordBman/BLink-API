@@ -3,7 +3,8 @@
   "version": "1.0.50",
   "scripts": {
     "migrate": "bunx drizzle-kit push",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/index.ts",
+    "generate": "bun generate-keys.ts"
   },
   "dependencies": {
     "@elysia/html": "^1.4.1",
@@ -11,7 +12,8 @@
     "@libsql/client": "^0.17.3",
     "drizzle-orm": "^0.45.2",
     "elysia": "latest",
-    "jet-logger": "^2.2.3"
+    "jet-logger": "^2.2.3",
+    "jose": "^6.2.3"
   },
   "devDependencies": {
     "bun-types": "latest",

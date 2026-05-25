@@ -1,12 +1,20 @@
 import Elysia from "elysia";
 
-const api = new Elysia({ prefix: "/api" })
-api.get("/", ({ status })=>{
-    return status(200, { message: "Welcome to BLink API" })
-})
+import auth from "./auth";
+import { apiAuthenicationPlugin } from "../plugins";
 
-api.all("*", ({ status })=>{
-    return status(404, { message: "endpoint doesnot exists" });
+
+const secure = new Elysia().use(apiAuthenicationPlugin)
+secure.get("/", ({ status })=>{
+    return status(200, { message: "Welcome to BLink API" })
 });
+
+secure.all("*", ({ status })=>{
+    return status(404, { message: "Endpoint doesnot exists" });
+});
+
+const api = new Elysia({ prefix: "/api" })
+.use(auth)
+.use(secure)
 
 export default api;

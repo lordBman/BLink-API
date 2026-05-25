@@ -11,6 +11,7 @@
         "drizzle-orm": "^0.45.2",
         "elysia": "latest",
         "jet-logger": "^2.2.3",
+        "jose": "^6.2.3",
       },
       "devDependencies": {
         "bun-types": "latest",
@@ -176,6 +177,8 @@
     "ieee754": ["ieee754@1.2.1", "", {}, "sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA=="],
 
     "jet-logger": ["jet-logger@2.2.3", "", { "dependencies": { "colors": "1.4.0" } }, "sha512-/RDYgayCwNCDfz7BQ2A6q5c/W75dbLIgIR20+VwLRVqEUn0egklnrF/3lEXQfz2GyJkfyO9bBRvq0t9Jfdu2CQ=="],
+
+    "jose": ["jose@6.2.3", "", {}, "sha512-YYVDInQKFJfR/xa3ojUTl8c2KoTwiL1R5Wg9YCydwH0x0B9grbzlg5HC7mMjCtUJjbQ/YnGEZIhI5tCgfTb4Hw=="],
 
     "js-base64": ["js-base64@3.7.8", "", {}, "sha512-hNngCeKxIUQiEUN3GPJOkz4wF/YvdUdbNL9hsBcMQTkKzboD7T/q3OYOuuPZLUE6dBxSGpwhk5mwuDud7JVAow=="],
 

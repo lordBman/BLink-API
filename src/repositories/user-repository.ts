@@ -6,7 +6,7 @@ import db from "../database";
 import { usersTable } from "../database/schema";
 import { eq } from 'drizzle-orm';
 
-namespace UserRepository {
+namespace userRepository {
     export const create = async(data: Partial<User>): Promise<User> =>{
         try{
             if(data.email && data.fname && data.lname){
@@ -111,4 +111,4 @@ namespace UserRepository {
     }
 }
 
-export default UserRepository
+export default userRepository

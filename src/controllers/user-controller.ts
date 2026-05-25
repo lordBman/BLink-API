@@ -1,16 +1,16 @@
-import { LinkRepository, UserRepository } from "../repositories"
+import { linkRepository, userRepository } from "../repositories"
 
-namespace UserController{
+namespace userController{
     export const init = async (id: string) =>{
-        const user = await UserRepository.get(id)
-        const links = await LinkRepository.get(user.id)
+        const user = await userRepository.get(id)
+        const links = await linkRepository.get(user.id)
 
         return { user, links }
     }
 
     export const remove = async (id: string) =>{
-        return await UserRepository.remove(id)
+        return await userRepository.remove(id)
     }
 }
 
-export default UserController
+export default userController

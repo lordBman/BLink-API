@@ -1,5 +1,5 @@
-import AuthRepository from "./auth-repository";
-import LinkRepository from "./link-repository";
-import UserRepository from "./user-repository";
+import authRepository from "./auth-repository";
+import linkRepository from "./link-repository";
+import userRepository from "./user-repository";
 
-export { AuthRepository, LinkRepository, UserRepository }
+export { authRepository, linkRepository, userRepository }
