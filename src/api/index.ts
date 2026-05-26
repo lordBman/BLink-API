@@ -2,19 +2,19 @@ import Elysia from "elysia";
 
 import auth from "./auth";
 import { apiAuthenicationPlugin } from "../plugins";
+import user from "./user";
 
-
-const secure = new Elysia().use(apiAuthenicationPlugin)
-secure.get("/", ({ status })=>{
+apiAuthenicationPlugin.use(user)
+apiAuthenicationPlugin.get("/", ({ status })=>{
     return status(200, { message: "Welcome to BLink API" })
 });
 
-secure.all("*", ({ status })=>{
+apiAuthenicationPlugin.all("*", ({ status })=>{
     return status(404, { message: "Endpoint doesnot exists" });
 });
 
 const api = new Elysia({ prefix: "/api" })
 .use(auth)
-.use(secure)
+.use(apiAuthenicationPlugin)
 
 export default api;
