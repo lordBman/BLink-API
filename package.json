@@ -4,7 +4,8 @@
   "scripts": {
     "migrate": "bunx drizzle-kit push",
     "dev": "bun run --watch src/index.ts",
-    "generate": "bun generate-keys.ts"
+    "generate": "bun generate-keys.ts",
+    "bundle": "bun run src/build.ts"
   },
   "dependencies": {
     "@elysia/html": "^1.4.1",
