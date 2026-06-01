@@ -2,6 +2,8 @@ import { Elysia } from "elysia";
 import { staticPlugin } from '@elysia/static'
 import jetLogger from "jet-logger";
 
+import { Glob } from "bun";
+
 import pages from "./pages";
 import api from "./api";
 

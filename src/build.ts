@@ -2,18 +2,18 @@ import { Glob } from "bun";
 import JetLogger from "jet-logger";
 
 const glob = new Glob("*.ts");
-const path = "./src/pages/scripts";
+const path = "./src/scripts";
 const files = Array.from(glob.scanSync(path));
 
 if (files.length === 0) {
-    JetLogger.warn("No entry points found in the ./pages/scripts directory.");
+    JetLogger.warn("No entry points found in the ./scripts directory.");
     process.exit(0);
 }
 
 JetLogger.info(`Found ${files.length} entry points: ${files.join(", ")}`);
 Bun.build({
     entrypoints: files.map(file => `${path}/${file}`),
-    outdir: './assets/scripts',
+    outdir: './assets/js',
     minify: true,
     sourcemap: 'linked',
     splitting: false,

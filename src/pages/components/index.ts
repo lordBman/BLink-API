@@ -1,3 +1,4 @@
 import Contianer from "./contianer"
+import Header from "./header"
 
-export { Contianer }
+export { Contianer, Header }
